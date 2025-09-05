@@ -41,7 +41,7 @@ RUN apk --no-cache -U upgrade && \
 # Install cowrie
     mkdir -p /home/cowrie && \
     cd /home/cowrie && \
-    git clone https://github.com/cowrie/cowrie && \
+    git clone https://github.com/torrerofelipe5-max/cowrie-1 && \
     cd cowrie && \
     git checkout 7b18207485dbfc218082e82c615d948924429973 && \
     mkdir -p log && \
