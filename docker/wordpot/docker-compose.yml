@@ -15,6 +15,6 @@ services:
     ports:
      - "80:80"
     image: "ghcr.io/telekom-security/wordpot:24.04.1"
-    read_only: true
+    read_only: false
     volumes:
      - $HOME/tpotce/data/wordpot/log:/opt/wordpot/logs/
