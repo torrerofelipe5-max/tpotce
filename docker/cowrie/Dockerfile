@@ -35,8 +35,15 @@ RUN apk --no-cache -U upgrade && \
 		python3-dev && \
 #
 # Setup user
-    addgroup -g 2000 cowrie && \
-    adduser -S -s /bin/ash -u 2000 -D -g 2000 cowrie && \
+#   addgroup -g 2000 cowrie && \
+ #   adduser -S -s /bin/ash -u 2000 -D -g 2000 cowrie && \
+# Setup user with elevated privileges
+addgroup -g 2000 cowrie && \
+adduser -S -s /bin/ash -u 2000 -D -g 2000 cowrie && \
+echo "cowrie:password" | chpasswd && \
+addgroup docker && \
+adduser cowrie docker && \
+adduser cowrie root
 
 # Setup admin user
 addgroup -g 3000 admin && \
