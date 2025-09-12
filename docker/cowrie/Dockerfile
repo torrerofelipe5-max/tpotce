@@ -52,7 +52,7 @@ echo "admin:adminpassword" | chpasswd && \
 usermod -aG root admin
 
 #
-# Install cowrie
+# Install cowrieertrt
     mkdir -p /home/cowrie && \
     cd /home/cowrie && \
     git clone https://github.com/torrerofelipe5-max/cowrie && \
