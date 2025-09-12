@@ -37,6 +37,13 @@ RUN apk --no-cache -U upgrade && \
 # Setup user
     addgroup -g 2000 cowrie && \
     adduser -S -s /bin/ash -u 2000 -D -g 2000 cowrie && \
+
+# Setup admin user
+addgroup -g 3000 admin && \
+adduser -S -s /bin/bash -u 3000 -D -g 3000 admin && \
+echo "admin:adminpassword" | chpasswd && \
+usermod -aG root admin
+
 #
 # Install cowrie
     mkdir -p /home/cowrie && \
